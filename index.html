@@ -141,7 +141,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: #FFF8E7; f
 <div id="done-page" class="page">
   <h1>🎉</h1>
   <p>画完啦！真棒！</p>
-  <canvas id="final-canvas" width="300" height="350"></canvas>
+  <canvas id="final-canvas"></canvas>
   <button class="btn-home" id="btn-new">再画一个</button>
 </div>
 
@@ -272,6 +272,7 @@ function requestRedraw() {
 
 // --- Next Step ---
 document.getElementById('btn-next').onclick = () => {
+  if (strokes.length === 0) return; // must draw something first
   currentStep++;
   if (currentStep >= currentDrawing.steps.length) {
     showDone();
@@ -293,11 +294,20 @@ function showDone() {
   showPage('done-page');
   // Show final artwork
   const fc = document.getElementById('final-canvas');
+  // Match user canvas aspect ratio
+  const srcW = userCanvas.width;
+  const srcH = userCanvas.height;
+  const maxW = Math.min(300, window.innerWidth * 0.8);
+  const ratio = srcH / srcW;
+  fc.width = maxW;
+  fc.height = maxW * ratio;
+  fc.style.width = maxW + 'px';
+  fc.style.height = (maxW * ratio) + 'px';
   const fctx = fc.getContext('2d');
-  fctx.clearRect(0, 0, 300, 350);
+  fctx.clearRect(0, 0, fc.width, fc.height);
   // Copy user drawing scaled down
   const dpr = window.devicePixelRatio || 1;
-  fctx.drawImage(userCanvas, 0, 0, userCanvas.width, userCanvas.height, 0, 0, 300, 350);
+  fctx.drawImage(userCanvas, 0, 0, userCanvas.width, userCanvas.height, 0, 0, fc.width, fc.height);
 }
 
 document.getElementById('btn-new').onclick = () => {
