@@ -10,6 +10,9 @@ let guideMode = localStorage.getItem('guideMode') || 'fade';
 let guideOpacity = GUIDE_MODES[guideMode].before;
 let hasStartedDrawing = false;
 
+// Cache for loaded SVG images
+const svgImageCache = {};
+
 function setGuideMode(mode) {
   guideMode = mode;
   localStorage.setItem('guideMode', mode);
@@ -27,14 +30,36 @@ function onDrawStart() {
   }
 }
 
+// Preload all SVG images for a drawing
+function preloadDrawingSVGs(drawing) {
+  for (const step of drawing.steps) {
+    if (step.svg) {
+      if (!svgImageCache[step.svg]) {
+        const img = new Image();
+        img.src = step.svg;
+        svgImageCache[step.svg] = img;
+      }
+    }
+  }
+}
+
 function drawGuide(ctx, step, completedSteps, allSteps) {
   ctx.save();
-  // Only draw current step guide — completed steps' guides are hidden
   ctx.globalAlpha = guideOpacity;
-  ctx.strokeStyle = '#7EC8E3';
-  ctx.lineWidth = 2.5;
-  ctx.setLineDash([]);
-  drawStepPaths(ctx, step);
+
+  if (step.svg) {
+    // Image-based rendering
+    const img = svgImageCache[step.svg];
+    if (img && img.complete && img.naturalWidth > 0) {
+      ctx.drawImage(img, 0, 0, 300, 350);
+    }
+  } else {
+    // Path-based rendering (for letters, digits, etc.)
+    ctx.strokeStyle = '#7EC8E3';
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([]);
+    drawStepPaths(ctx, step);
+  }
   ctx.restore();
 }
 
@@ -66,11 +91,25 @@ function drawThumbnail(ctx, drawing, size) {
   const scale = size / 300;
   ctx.save();
   ctx.scale(scale, scale);
-  ctx.strokeStyle = '#555';
-  ctx.lineWidth = 2.5;
-  ctx.setLineDash([]);
-  for (const step of drawing.steps) {
-    drawStepPaths(ctx, step);
+
+  if (drawing.steps[0] && drawing.steps[0].svg) {
+    // For SVG-based drawings, draw all step images stacked
+    for (const step of drawing.steps) {
+      if (step.svg) {
+        const img = svgImageCache[step.svg];
+        if (img && img.complete && img.naturalWidth > 0) {
+          ctx.globalAlpha = 0.8;
+          ctx.drawImage(img, 0, 0, 300, 350);
+        }
+      }
+    }
+  } else {
+    ctx.strokeStyle = '#555';
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([]);
+    for (const step of drawing.steps) {
+      drawStepPaths(ctx, step);
+    }
   }
   ctx.restore();
 }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三种绘图方式对比</title>
+<style>
+body { font-family: sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+h1 { text-align: center; }
+.row { display: flex; gap: 20px; margin: 20px 0; flex-wrap: wrap; justify-content: center; }
+.card { background: white; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; width: 260px; }
+.card h3 { margin: 0 0 8px; }
+.card p { font-size: 13px; color: #666; margin: 4px 0; }
+canvas { border: 1px solid #eee; border-radius: 8px; }
+.pros { color: green; font-size: 12px; text-align: left; margin-top: 10px; }
+.cons { color: #c00; font-size: 12px; text-align: left; }
+</style>
+</head>
+<body>
+<h1>三种绘图方式对比 — 画一只猫</h1>
+<div class="row">
+
+<!-- 方式1: 当前的坐标数组 -->
+<div class="card">
+<h3>方式1: 坐标数组（当前）</h3>
+<canvas id="c1" width="240" height="240"></canvas>
+<p>用 JSON 数字定义每条线的坐标</p>
+<div class="pros">✓ 文件小，纯数据<br>✓ 不需要额外文件</div>
+<div class="cons">✗ AI 很难画好看<br>✗ 曲线全靠猜坐标</div>
+</div>
+
+<!-- 方式2: 内嵌 SVG 代码 -->
+<div class="card">
+<h3>方式2: SVG 代码</h3>
+<canvas id="c2" width="240" height="240"></canvas>
+<p>每个图用完整 SVG XML 描述，渲染到 canvas</p>
+<div class="pros">✓ 比坐标数组表达力强<br>✓ 可以用贝塞尔曲线<br>✓ 仍然是文本，不需要图片文件</div>
+<div class="cons">✗ AI 生成的 SVG 也可能不好看<br>✗ 文件会大一些</div>
+</div>
+
+<!-- 方式3: 图片文件 -->
+<div class="card">
+<h3>方式3: 图片文件</h3>
+<canvas id="c3" width="240" height="240"></canvas>
+<p>每步一张 PNG/SVG 图片文件，直接显示</p>
+<div class="pros">✓ 效果最好，可以用任何工具画<br>✓ 可以从网上找现成简笔画<br>✓ 所见即所得</div>
+<div class="cons">✗ 需要准备很多图片文件<br>✗ 文件体积大一些</div>
+</div>
+
+</div>
+
+<h2 style="text-align:center; margin-top: 30px;">效果对比</h2>
+<p style="text-align:center; color:#666;">同一只猫，三种方式画出来的参考线效果：</p>
+
+<script>
+// 方式1: 坐标数组 (当前方式)
+(function(){
+  const ctx = document.getElementById('c1').getContext('2d');
+  ctx.strokeStyle = '#aaa';
+  ctx.lineWidth = 2;
+  ctx.setLineDash([4,4]);
+  // 圆形头
+  ctx.beginPath(); ctx.arc(120, 100, 60, 0, Math.PI*2); ctx.stroke();
+  // 三角耳朵
+  ctx.beginPath(); ctx.moveTo(75,55); ctx.lineTo(60,10); ctx.lineTo(95,45); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(165,55); ctx.lineTo(180,10); ctx.lineTo(145,45); ctx.stroke();
+  // 竖线眼睛
+  ctx.beginPath(); ctx.moveTo(100,85); ctx.lineTo(100,110); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(140,85); ctx.lineTo(140,110); ctx.stroke();
+  // 三角鼻子
+  ctx.beginPath(); ctx.moveTo(117,125); ctx.lineTo(120,133); ctx.lineTo(123,125); ctx.stroke();
+  // U形身体
+  ctx.beginPath(); ctx.moveTo(100,160); ctx.quadraticCurveTo(100,210,120,210); ctx.quadraticCurveTo(140,210,140,160); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = '#999';
+  ctx.font = '11px sans-serif';
+  ctx.fillText('← 全是圆+直线，很生硬', 20, 230);
+})();
+
+// 方式2: SVG 代码 (更丰富的曲线)
+(function(){
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="5,4">
+    <!-- 头：略扁的椭圆 -->
+    <ellipse cx="120" cy="105" rx="65" ry="58"/>
+    <!-- 耳朵：三角带圆角 -->
+    <path d="M72,58 Q58,20 80,15 Q95,12 88,50"/>
+    <path d="M168,58 Q182,20 160,15 Q145,12 152,50"/>
+    <!-- 眼睛：短粗竖线 -->
+    <line x1="97" y1="90" x2="97" y2="115" stroke-width="4" stroke-linecap="round"/>
+    <line x1="143" y1="90" x2="143" y2="115" stroke-width="4" stroke-linecap="round"/>
+    <!-- 鼻子：小椭圆 -->
+    <ellipse cx="120" cy="130" rx="6" ry="4"/>
+    <!-- 嘴：微笑弧线 -->
+    <path d="M108,140 Q120,152 132,140"/>
+    <!-- 胡须：横线 -->
+    <line x1="60" y1="120" x2="90" y2="125"/>
+    <line x1="60" y1="132" x2="90" y2="130"/>
+    <line x1="150" y1="125" x2="180" y2="120"/>
+    <line x1="150" y1="130" x2="180" y2="132"/>
+    <!-- 身体 -->
+    <path d="M95,162 Q92,210 120,212 Q148,210 145,162"/>
+  </svg>`;
+  const img = new Image();
+  img.onload = function() {
+    const ctx = document.getElementById('c2').getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    ctx.fillStyle = '#999';
+    ctx.font = '11px sans-serif';
+    ctx.fillText('← 曲线更自然，有胡须细节', 10, 235);
+  };
+  img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svg)));
+})();
+
+// 方式3: 用一张精心制作的图片 (这里模拟用更精细的SVG代表"图片文件"效果)
+(function(){
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" fill="none">
+    <!-- 这代表用专业工具画的简笔画图片 -->
+    <!-- 头 -->
+    <path d="M120,165 C60,165 55,105 55,95 C55,50 80,30 120,30 C160,30 185,50 185,95 C185,105 180,165 120,165Z" stroke="#aaa" stroke-width="2.5" stroke-dasharray="6,4"/>
+    <!-- 耳朵 - 圆润三角 -->
+    <path d="M78,50 C72,30 65,12 75,8 C85,4 92,18 90,42" stroke="#aaa" stroke-width="2.5" stroke-dasharray="6,4"/>
+    <path d="M162,50 C168,30 175,12 165,8 C155,4 148,18 150,42" stroke="#aaa" stroke-width="2.5" stroke-dasharray="6,4"/>
+    <!-- 眼睛 - 椭圆+高光 -->
+    <ellipse cx="98" cy="95" rx="10" ry="14" stroke="#aaa" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="95" cy="90" r="3" fill="#ccc"/>
+    <ellipse cx="142" cy="95" rx="10" ry="14" stroke="#aaa" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle cx="139" cy="90" r="3" fill="#ccc"/>
+    <!-- 鼻子 -->
+    <path d="M115,118 Q120,125 125,118" stroke="#aaa" stroke-width="2" stroke-dasharray="4,3"/>
+    <!-- 嘴 -->
+    <path d="M105,132 Q120,145 135,132" stroke="#aaa" stroke-width="2" stroke-dasharray="4,3"/>
+    <!-- 胡须 -->
+    <line x1="55" y1="108" x2="88" y2="112" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="55" y1="120" x2="88" y2="118" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="55" y1="132" x2="88" y2="128" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="152" y1="112" x2="185" y2="108" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="152" y1="118" x2="185" y2="120" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="152" y1="128" x2="185" y2="132" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <!-- 身体 -->
+    <path d="M95,165 C90,190 95,215 120,218 C145,215 150,190 145,165" stroke="#aaa" stroke-width="2.5" stroke-dasharray="6,4"/>
+    <!-- 尾巴 -->
+    <path d="M145,200 C160,195 170,180 165,170" stroke="#aaa" stroke-width="2" stroke-dasharray="4,3"/>
+  </svg>`;
+  const img = new Image();
+  img.onload = function() {
+    const ctx = document.getElementById('c3').getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    ctx.fillStyle = '#999';
+    ctx.font = '11px sans-serif';
+    ctx.fillText('← 最精细，有高光/尾巴等细节', 10, 235);
+  };
+  img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svg)));
+})();
+</script>
+
+<div style="margin-top:30px; background:white; border-radius:12px; padding:20px;">
+<h3>总结</h3>
+<table style="width:100%; border-collapse:collapse; font-size:14px;">
+<tr style="border-bottom:1px solid #eee"><th style="text-align:left;padding:8px">方式</th><th>效果</th><th>工作量</th><th>推荐场景</th></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:8px"><b>1. 坐标数组</b>（当前）</td><td>⭐⭐</td><td>低</td><td>简单几何（字母、数字）</td></tr>
+<tr style="border-bottom:1px solid #eee"><td style="padding:8px"><b>2. SVG 代码</b></td><td>⭐⭐⭐</td><td>中</td><td>动物、拼音（AI生成SVG更灵活）</td></tr>
+<tr><td style="padding:8px"><b>3. 图片文件</b></td><td>⭐⭐⭐⭐</td><td>高（需找/画图）</td><td>追求完美效果</td></tr>
+</table>
+<p style="margin-top:15px; color:#333;"><b>我的建议：混合使用</b> — 字母数字继续用坐标数组（效果已经不错），Labu动物和拼音改用 <b>SVG代码</b>（方式2），我直接生成完整SVG，效果会比坐标数组好很多，而且不需要你额外准备图片文件。</p>
+</div>
+
+</body>
+</html>

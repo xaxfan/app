@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 350" fill="none" stroke="#999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 下垂小耳 -->
+  <path d="M75,140 C55,135 45,150 50,165 C55,178 70,175 78,168"/>
+  <path d="M225,140 C245,135 255,150 250,165 C245,178 230,175 222,168"/>
+</svg>

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 350" fill="none" stroke="#999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 圆形大头 -->
+  <path d="M150,265 C80,265 50,215 50,155 C50,80 85,40 150,40 C215,40 250,80 250,155 C250,215 220,265 150,265Z"/>
+</svg>

@@ -190,7 +190,17 @@ function buildHome() {
     const tab = document.createElement('div');
     tab.className = 'cat-tab' + (i === currentCategory ? ' active' : '');
     tab.textContent = cat.emoji + ' ' + cat.name;
-    tab.onclick = () => { currentCategory = i; buildHome(); };
+    tab.onclick = () => { currentCategory = i; // Preload all SVG images for thumbnails
+for (const cat of CATEGORIES) {
+  for (const d of cat.drawings) {
+    preloadDrawingSVGs(d);
+  }
+}
+// Redraw home after SVGs load
+setTimeout(() => buildHome(), 300);
+setTimeout(() => buildHome(), 1000);
+
+buildHome(); };
     tabs.appendChild(tab);
   });
   const grid = document.getElementById('drawing-grid');
@@ -215,6 +225,7 @@ function buildHome() {
 // --- Start Drawing ---
 function startDrawing(d) {
   currentDrawing = d;
+  preloadDrawingSVGs(d);
   currentStep = 0;
   strokes = [];
   showPage('draw-page');
@@ -311,7 +322,7 @@ function showDone() {
   showPage('done-page');
   // Voice congratulation
   if ('speechSynthesis' in window) {
-    const phrases = ['宸宸你真棒','宸宸你太厉害了吧','宸宸你真是妈妈的乖宝宝','宸宸你又厉害了'];
+    const phrases = ['宸宸你真棒','宸宸你真是妈妈的乖宝宝'];
     const text = phrases[Math.floor(Math.random() * phrases.length)];
     const u = new SpeechSynthesisUtterance(text);
     u.lang = 'zh-CN';

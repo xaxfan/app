@@ -1387,568 +1387,180 @@ const CATEGORIES = [
     "emoji": "⭐",
     "drawings": [
       {
-        "id": "labu_cat",
-        "name": "猫咪",
-        "emoji": "🐱",
-        "steps": [
-          {
-            "label": "头",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 150,
-                "cy": 130,
-                "r": 80
-              }
+            "id": "labu_cat",
+            "name": "猫咪",
+            "emoji": "🐱",
+            "steps": [
+                  {
+                        "label": "头",
+                        "svg": "svg/labu_cat/step1_head.svg"
+                  },
+                  {
+                        "label": "耳朵",
+                        "svg": "svg/labu_cat/step2_ears.svg"
+                  },
+                  {
+                        "label": "眼睛",
+                        "svg": "svg/labu_cat/step3_eyes.svg"
+                  },
+                  {
+                        "label": "鼻子和嘴",
+                        "svg": "svg/labu_cat/step4_nose_mouth.svg"
+                  },
+                  {
+                        "label": "胡子",
+                        "svg": "svg/labu_cat/step5_whiskers.svg"
+                  },
+                  {
+                        "label": "身体",
+                        "svg": "svg/labu_cat/step6_body.svg"
+                  }
             ]
-          },
-          {
-            "label": "耳朵",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M90,70 L70,20 L110,55"
-              },
-              {
-                "type": "path",
-                "d": "M210,70 L230,20 L190,55"
-              }
-            ]
-          },
-          {
-            "label": "眼睛",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 120,
-                "y1": 110,
-                "x2": 120,
-                "y2": 140
-              },
-              {
-                "type": "line",
-                "x1": 180,
-                "y1": 110,
-                "x2": 180,
-                "y2": 140
-              }
-            ]
-          },
-          {
-            "label": "鼻子和嘴",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M145,155 L150,165 L155,155"
-              },
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 180,
-                "rx": 12,
-                "ry": 8
-              }
-            ]
-          },
-          {
-            "label": "胡子",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 105,
-                "cy": 145,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 105,
-                "cy": 155,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 105,
-                "cy": 165,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 195,
-                "cy": 145,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 195,
-                "cy": 155,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 195,
-                "cy": 165,
-                "r": 3
-              }
-            ]
-          },
-          {
-            "label": "身体",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M125,210 Q125,270 150,270 Q175,270 175,210"
-              }
-            ]
-          }
-        ]
       },
       {
-        "id": "labu_bear",
-        "name": "小熊",
-        "emoji": "🐻",
-        "steps": [
-          {
-            "label": "头",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M150,130 m-75,0 a75,70 0 1,0 150,0 a75,70 0 1,0 -150,0"
-              }
+            "id": "labu_bear",
+            "name": "小熊",
+            "emoji": "🐻",
+            "steps": [
+                  {
+                        "label": "头",
+                        "svg": "svg/labu_bear/step1_head.svg"
+                  },
+                  {
+                        "label": "耳朵",
+                        "svg": "svg/labu_bear/step2_ears.svg"
+                  },
+                  {
+                        "label": "眼睛",
+                        "svg": "svg/labu_bear/step3_eyes.svg"
+                  },
+                  {
+                        "label": "鼻子和嘴",
+                        "svg": "svg/labu_bear/step4_nose_mouth.svg"
+                  },
+                  {
+                        "label": "蝴蝶结",
+                        "svg": "svg/labu_bear/step5_bowtie.svg"
+                  },
+                  {
+                        "label": "身体",
+                        "svg": "svg/labu_bear/step6_body.svg"
+                  }
             ]
-          },
-          {
-            "label": "耳朵",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 90,
-                "cy": 65,
-                "r": 22
-              },
-              {
-                "type": "circle",
-                "cx": 210,
-                "cy": 65,
-                "r": 22
-              }
-            ]
-          },
-          {
-            "label": "眼睛",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 120,
-                "y1": 115,
-                "x2": 120,
-                "y2": 145
-              },
-              {
-                "type": "line",
-                "x1": 180,
-                "y1": 115,
-                "x2": 180,
-                "y2": 145
-              }
-            ]
-          },
-          {
-            "label": "鼻子和嘴",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M145,160 L150,170 L155,160"
-              },
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 185,
-                "rx": 12,
-                "ry": 8
-              }
-            ]
-          },
-          {
-            "label": "蝴结",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M130,210 Q140,200 150,210 Q160,200 170,210"
-              },
-              {
-                "type": "path",
-                "d": "M130,210 Q140,220 150,210 Q160,220 170,210"
-              }
-            ]
-          },
-          {
-            "label": "身体",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M125,220 Q125,280 150,280 Q175,280 175,220"
-              }
-            ]
-          }
-        ]
       },
       {
-        "id": "labu_dog",
-        "name": "小狗",
-        "emoji": "🐶",
-        "steps": [
-          {
-            "label": "头",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M150,130 m-70,0 a70,65 0 1,0 140,0 a70,65 0 1,0 -140,0"
-              }
+            "id": "labu_dog",
+            "name": "小狗",
+            "emoji": "🐶",
+            "steps": [
+                  {
+                        "label": "头",
+                        "svg": "svg/labu_dog/step1_head.svg"
+                  },
+                  {
+                        "label": "耳朵",
+                        "svg": "svg/labu_dog/step2_ears.svg"
+                  },
+                  {
+                        "label": "眼睛",
+                        "svg": "svg/labu_dog/step3_eyes.svg"
+                  },
+                  {
+                        "label": "鼻子和嘴",
+                        "svg": "svg/labu_dog/step4_nose_mouth.svg"
+                  },
+                  {
+                        "label": "胡须点",
+                        "svg": "svg/labu_dog/step5_dots.svg"
+                  },
+                  {
+                        "label": "身体",
+                        "svg": "svg/labu_dog/step6_body.svg"
+                  }
             ]
-          },
-          {
-            "label": "耳朵",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M85,90 Q70,70 60,100 Q55,140 80,150"
-              },
-              {
-                "type": "path",
-                "d": "M215,90 Q230,70 240,100 Q245,140 220,150"
-              }
-            ]
-          },
-          {
-            "label": "眼睛",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 120,
-                "y1": 115,
-                "x2": 120,
-                "y2": 140
-              },
-              {
-                "type": "line",
-                "x1": 180,
-                "y1": 115,
-                "x2": 180,
-                "y2": 140
-              }
-            ]
-          },
-          {
-            "label": "鼻子和嘴",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M145,155 L150,165 L155,155"
-              },
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 180,
-                "rx": 12,
-                "ry": 8
-              }
-            ]
-          },
-          {
-            "label": "胡子",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 108,
-                "cy": 150,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 108,
-                "cy": 160,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 192,
-                "cy": 150,
-                "r": 3
-              },
-              {
-                "type": "circle",
-                "cx": 192,
-                "cy": 160,
-                "r": 3
-              }
-            ]
-          },
-          {
-            "label": "身体",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M125,210 Q125,270 150,270 Q175,270 175,210"
-              }
-            ]
-          }
-        ]
       },
       {
-        "id": "labu_rabbit2",
-        "name": "兔兔",
-        "emoji": "🐰",
-        "steps": [
-          {
-            "label": "头",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 150,
-                "cy": 140,
-                "r": 70
-              }
+            "id": "labu_rabbit2",
+            "name": "兔兔",
+            "emoji": "🐰",
+            "steps": [
+                  {
+                        "label": "头",
+                        "svg": "svg/labu_rabbit/step1_head.svg"
+                  },
+                  {
+                        "label": "耳朵",
+                        "svg": "svg/labu_rabbit/step2_ears.svg"
+                  },
+                  {
+                        "label": "眼睛",
+                        "svg": "svg/labu_rabbit/step3_eyes.svg"
+                  },
+                  {
+                        "label": "鼻子和嘴",
+                        "svg": "svg/labu_rabbit/step4_nose_mouth.svg"
+                  },
+                  {
+                        "label": "身体",
+                        "svg": "svg/labu_rabbit/step5_body.svg"
+                  }
             ]
-          },
-          {
-            "label": "耳朵",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M125,75 Q120,10 130,10 Q140,10 135,75"
-              },
-              {
-                "type": "path",
-                "d": "M165,75 Q160,10 170,10 Q180,10 175,75"
-              }
-            ]
-          },
-          {
-            "label": "眼睛",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 125,
-                "cy": 130,
-                "r": 10
-              },
-              {
-                "type": "circle",
-                "cx": 125,
-                "cy": 130,
-                "r": 4
-              },
-              {
-                "type": "circle",
-                "cx": 175,
-                "cy": 130,
-                "r": 10
-              },
-              {
-                "type": "circle",
-                "cx": 175,
-                "cy": 130,
-                "r": 4
-              }
-            ]
-          },
-          {
-            "label": "鼻子和嘴",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M145,160 L150,168 L155,160"
-              },
-              {
-                "type": "path",
-                "d": "M140,175 Q150,185 160,175"
-              }
-            ]
-          },
-          {
-            "label": "身体",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M125,210 Q125,270 150,270 Q175,270 175,210"
-              }
-            ]
-          }
-        ]
       },
       {
-        "id": "labu_sheep",
-        "name": "小羊",
-        "emoji": "🐑",
-        "steps": [
-          {
-            "label": "头",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M90,130 Q85,100 100,90 Q115,80 130,85 Q140,75 155,80 Q170,75 180,85 Q195,80 210,100 Q215,115 210,130 Q215,145 205,160 Q190,175 150,180 Q110,175 95,160 Q85,145 90,130"
-              }
+            "id": "labu_sheep",
+            "name": "小羊",
+            "emoji": "🐑",
+            "steps": [
+                  {
+                        "label": "头",
+                        "svg": "svg/labu_sheep/step1_head.svg"
+                  },
+                  {
+                        "label": "耳朵",
+                        "svg": "svg/labu_sheep/step2_ears.svg"
+                  },
+                  {
+                        "label": "眼睛",
+                        "svg": "svg/labu_sheep/step3_eyes.svg"
+                  },
+                  {
+                        "label": "鼻子和嘴",
+                        "svg": "svg/labu_sheep/step4_nose_mouth.svg"
+                  },
+                  {
+                        "label": "身体",
+                        "svg": "svg/labu_sheep/step5_body.svg"
+                  }
             ]
-          },
-          {
-            "label": "耳朵",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M85,120 Q60,110 55,130 Q50,150 75,145"
-              },
-              {
-                "type": "path",
-                "d": "M215,120 Q240,110 245,130 Q250,150 225,145"
-              }
-            ]
-          },
-          {
-            "label": "眼睛",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 125,
-                "y1": 120,
-                "x2": 125,
-                "y2": 145
-              },
-              {
-                "type": "line",
-                "x1": 175,
-                "y1": 120,
-                "x2": 175,
-                "y2": 145
-              }
-            ]
-          },
-          {
-            "label": "鼻子和嘴",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M145,155 L150,163 L155,155"
-              },
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 175,
-                "rx": 10,
-                "ry": 7
-              }
-            ]
-          },
-          {
-            "label": "身体",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M115,195 Q110,210 115,225 Q125,235 135,230 Q140,240 150,240 Q160,240 165,230 Q175,235 185,225 Q190,210 185,195"
-              }
-            ]
-          }
-        ]
       },
       {
-        "id": "labu_monkey",
-        "name": "小猴",
-        "emoji": "🐵",
-        "steps": [
-          {
-            "label": "头",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 150,
-                "cy": 130,
-                "r": 70
-              }
+            "id": "labu_monkey",
+            "name": "小猴",
+            "emoji": "🐵",
+            "steps": [
+                  {
+                        "label": "头",
+                        "svg": "svg/labu_monkey/step1_head.svg"
+                  },
+                  {
+                        "label": "耳朵",
+                        "svg": "svg/labu_monkey/step2_ears.svg"
+                  },
+                  {
+                        "label": "眼睛",
+                        "svg": "svg/labu_monkey/step3_eyes.svg"
+                  },
+                  {
+                        "label": "鼻子和嘴",
+                        "svg": "svg/labu_monkey/step4_nose_mouth.svg"
+                  },
+                  {
+                        "label": "身体",
+                        "svg": "svg/labu_monkey/step5_body.svg"
+                  }
             ]
-          },
-          {
-            "label": "耳朵",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 75,
-                "cy": 130,
-                "r": 20
-              },
-              {
-                "type": "circle",
-                "cx": 75,
-                "cy": 130,
-                "r": 10
-              },
-              {
-                "type": "circle",
-                "cx": 225,
-                "cy": 130,
-                "r": 20
-              },
-              {
-                "type": "circle",
-                "cx": 225,
-                "cy": 130,
-                "r": 10
-              }
-            ]
-          },
-          {
-            "label": "眼睛",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 125,
-                "y1": 115,
-                "x2": 125,
-                "y2": 140
-              },
-              {
-                "type": "line",
-                "x1": 175,
-                "y1": 115,
-                "x2": 175,
-                "y2": 140
-              }
-            ]
-          },
-          {
-            "label": "鼻子和嘴",
-            "paths": [
-              {
-                "type": "circle",
-                "cx": 140,
-                "cy": 160,
-                "r": 4
-              },
-              {
-                "type": "circle",
-                "cx": 160,
-                "cy": 160,
-                "r": 4
-              },
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 180,
-                "rx": 12,
-                "ry": 8
-              }
-            ]
-          },
-          {
-            "label": "身体",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M125,210 Q125,270 150,270 Q175,270 175,210"
-              }
-            ]
-          }
-        ]
       }
-    ]
+]
   },
   {
     "id": "scene",
@@ -2800,750 +2412,935 @@ const CATEGORIES = [
     "emoji": "🔤",
     "drawings": [
       {
-        "id": "letter_A",
-        "name": "A",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "A",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 50,
-                "x2": 80,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 50,
-                "x2": 220,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 110,
-                "y1": 190,
-                "x2": 190,
-                "y2": 190
-              }
+            "id": "letter_A",
+            "name": "A",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 50,
+                                    "x2": 80,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 50,
+                                    "x2": 220,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 110,
+                                    "y1": 190,
+                                    "x2": 190,
+                                    "y2": 190
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_B",
-        "name": "B",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "B",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "path",
-                "d": "M90,50 Q220,50 220,125 Q220,175 90,175"
-              },
-              {
-                "type": "path",
-                "d": "M90,175 Q230,175 230,237 Q230,300 90,300"
-              }
+            "id": "letter_B",
+            "name": "B",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "上弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M90,50 L160,50 Q210,50 210,100 Q210,150 160,150 L90,150"
+                              }
+                        ]
+                  },
+                  {
+                        "label": "下弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M90,150 L170,150 Q220,150 220,225 Q220,300 170,300 L90,300"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_C",
-        "name": "C",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "C",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M220,80 Q150,40 100,80 Q60,130 60,175 Q60,220 100,270 Q150,310 220,270"
-              }
+            "id": "letter_C",
+            "name": "C",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "弧线",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M220,80 Q150,30 100,80 Q60,140 60,175 Q60,210 100,270 Q150,320 220,270"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_D",
-        "name": "D",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "D",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "path",
-                "d": "M90,50 Q250,50 250,175 Q250,300 90,300"
-              }
+            "id": "letter_D",
+            "name": "D",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M90,50 Q240,50 240,175 Q240,300 90,300"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_E",
-        "name": "E",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "E",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 220,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 175,
-                "x2": 200,
-                "y2": 175
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 300,
-                "x2": 220,
-                "y2": 300
-              }
+            "id": "letter_E",
+            "name": "E",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "上横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 210,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "中横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 175,
+                                    "x2": 190,
+                                    "y2": 175
+                              }
+                        ]
+                  },
+                  {
+                        "label": "下横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 300,
+                                    "x2": 210,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_F",
-        "name": "F",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "F",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 220,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 175,
-                "x2": 200,
-                "y2": 175
-              }
+            "id": "letter_F",
+            "name": "F",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "上横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 210,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "中横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 175,
+                                    "x2": 190,
+                                    "y2": 175
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_G",
-        "name": "G",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "G",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M220,80 Q150,40 100,80 Q60,130 60,175 Q60,220 100,270 Q150,310 220,270 L220,175 L170,175"
-              }
+            "id": "letter_G",
+            "name": "G",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "弧线",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M220,80 Q150,30 100,80 Q60,140 60,175 Q60,210 100,270 Q150,320 220,270 L220,175"
+                              }
+                        ]
+                  },
+                  {
+                        "label": "横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 160,
+                                    "y1": 175,
+                                    "x2": 220,
+                                    "y2": 175
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_H",
-        "name": "H",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "H",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 50,
-                "x2": 210,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 175,
-                "x2": 210,
-                "y2": 175
-              }
+            "id": "letter_H",
+            "name": "H",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 210,
+                                    "y1": 50,
+                                    "x2": 210,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 175,
+                                    "x2": 210,
+                                    "y2": 175
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_I",
-        "name": "I",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "I",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 110,
-                "y1": 50,
-                "x2": 190,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 50,
-                "x2": 150,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 110,
-                "y1": 300,
-                "x2": 190,
-                "y2": 300
-              }
+            "id": "letter_I",
+            "name": "I",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "上横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 110,
+                                    "y1": 50,
+                                    "x2": 190,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 50,
+                                    "x2": 150,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "下横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 110,
+                                    "y1": 300,
+                                    "x2": 190,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_J",
-        "name": "J",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "J",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 110,
-                "y1": 50,
-                "x2": 210,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 170,
-                "y1": 50,
-                "x2": 170,
-                "y2": 250
-              },
-              {
-                "type": "path",
-                "d": "M170,250 Q170,300 130,300 Q90,300 90,260"
-              }
+            "id": "letter_J",
+            "name": "J",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "上横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 110,
+                                    "y1": 50,
+                                    "x2": 210,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "竖和弯",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M180,50 L180,240 Q180,300 120,300 Q90,300 80,270"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_K",
-        "name": "K",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "K",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 50,
-                "x2": 90,
-                "y2": 175
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 175,
-                "x2": 210,
-                "y2": 300
-              }
+            "id": "letter_K",
+            "name": "K",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "上斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 210,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 175
+                              }
+                        ]
+                  },
+                  {
+                        "label": "下斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 175,
+                                    "x2": 210,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_L",
-        "name": "L",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "L",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 300,
-                "x2": 220,
-                "y2": 300
-              }
+            "id": "letter_L",
+            "name": "L",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 300,
+                                    "x2": 210,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_M",
-        "name": "M",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "M",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 80,
-                "y1": 300,
-                "x2": 80,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 80,
-                "y1": 50,
-                "x2": 150,
-                "y2": 180
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 180,
-                "x2": 220,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 220,
-                "y1": 50,
-                "x2": 220,
-                "y2": 300
-              }
+            "id": "letter_M",
+            "name": "M",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 70,
+                                    "y1": 300,
+                                    "x2": 70,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "左斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 70,
+                                    "y1": 50,
+                                    "x2": 150,
+                                    "y2": 200
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 200,
+                                    "x2": 230,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 230,
+                                    "y1": 50,
+                                    "x2": 230,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_N",
-        "name": "N",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "N",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 300,
-                "x2": 90,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 210,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 300,
-                "x2": 210,
-                "y2": 50
-              }
+            "id": "letter_N",
+            "name": "N",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 300,
+                                    "x2": 90,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 210,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 210,
+                                    "y1": 300,
+                                    "x2": 210,
+                                    "y2": 50
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_O",
-        "name": "O",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "O",
-            "paths": [
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 175,
-                "rx": 70,
-                "ry": 125
-              }
+            "id": "letter_O",
+            "name": "O",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "圆",
+                        "paths": [
+                              {
+                                    "type": "ellipse",
+                                    "cx": 150,
+                                    "cy": 175,
+                                    "rx": 80,
+                                    "ry": 120
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_P",
-        "name": "P",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "P",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "path",
-                "d": "M90,50 Q230,50 230,112 Q230,175 90,175"
-              }
+            "id": "letter_P",
+            "name": "P",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M90,50 L160,50 Q220,50 220,110 Q220,170 160,170 L90,170"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_Q",
-        "name": "Q",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "Q",
-            "paths": [
-              {
-                "type": "ellipse",
-                "cx": 150,
-                "cy": 165,
-                "rx": 70,
-                "ry": 115
-              },
-              {
-                "type": "line",
-                "x1": 180,
-                "y1": 230,
-                "x2": 230,
-                "y2": 300
-              }
+            "id": "letter_Q",
+            "name": "Q",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "圆",
+                        "paths": [
+                              {
+                                    "type": "ellipse",
+                                    "cx": 150,
+                                    "cy": 165,
+                                    "rx": 80,
+                                    "ry": 110
+                              }
+                        ]
+                  },
+                  {
+                        "label": "尾巴",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 180,
+                                    "y1": 240,
+                                    "x2": 220,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_R",
-        "name": "R",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "R",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "path",
-                "d": "M90,50 Q230,50 230,112 Q230,175 90,175"
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 175,
-                "x2": 220,
-                "y2": 300
-              }
+            "id": "letter_R",
+            "name": "R",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 90,
+                                    "y1": 50,
+                                    "x2": 90,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M90,50 L160,50 Q220,50 220,110 Q220,170 160,170 L90,170"
+                              }
+                        ]
+                  },
+                  {
+                        "label": "腿",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 140,
+                                    "y1": 170,
+                                    "x2": 220,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_S",
-        "name": "S",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "S",
-            "paths": [
-              {
-                "type": "path",
-                "d": "M210,80 Q200,50 150,50 Q90,50 90,100 Q90,150 150,175 Q210,200 210,250 Q210,300 150,300 Q100,300 90,270"
-              }
+            "id": "letter_S",
+            "name": "S",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "上弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M200,80 Q180,40 150,40 Q100,40 90,90 Q85,130 130,155"
+                              }
+                        ]
+                  },
+                  {
+                        "label": "下弧",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M130,155 Q180,180 200,220 Q210,270 160,300 Q110,310 80,280"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_T",
-        "name": "T",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "T",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 70,
-                "y1": 50,
-                "x2": 230,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 50,
-                "x2": 150,
-                "y2": 300
-              }
+            "id": "letter_T",
+            "name": "T",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 70,
+                                    "y1": 50,
+                                    "x2": 230,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 50,
+                                    "x2": 150,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_U",
-        "name": "U",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "U",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 90,
-                "y2": 230
-              },
-              {
-                "type": "path",
-                "d": "M90,230 Q90,300 150,300 Q210,300 210,230"
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 230,
-                "x2": 210,
-                "y2": 50
-              }
+            "id": "letter_U",
+            "name": "U",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左竖",
+                        "paths": [
+                              {
+                                    "type": "path",
+                                    "d": "M90,50 L90,230 Q90,300 150,300 Q210,300 210,230 L210,50"
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_V",
-        "name": "V",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "V",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 80,
-                "y1": 50,
-                "x2": 150,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 300,
-                "x2": 220,
-                "y2": 50
-              }
+            "id": "letter_V",
+            "name": "V",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 80,
+                                    "y1": 50,
+                                    "x2": 150,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 300,
+                                    "x2": 220,
+                                    "y2": 50
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_W",
-        "name": "W",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "W",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 70,
-                "y1": 50,
-                "x2": 110,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 110,
-                "y1": 300,
-                "x2": 150,
-                "y2": 150
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 150,
-                "x2": 190,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 190,
-                "y1": 300,
-                "x2": 230,
-                "y2": 50
-              }
+            "id": "letter_W",
+            "name": "W",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "第1笔",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 60,
+                                    "y1": 50,
+                                    "x2": 100,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "第2笔",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 100,
+                                    "y1": 300,
+                                    "x2": 150,
+                                    "y2": 150
+                              }
+                        ]
+                  },
+                  {
+                        "label": "第3笔",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 150,
+                                    "x2": 200,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "第4笔",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 200,
+                                    "y1": 300,
+                                    "x2": 240,
+                                    "y2": 50
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_X",
-        "name": "X",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "X",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 210,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              }
+            "id": "letter_X",
+            "name": "X",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左上到右下",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 80,
+                                    "y1": 50,
+                                    "x2": 220,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右上到左下",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 220,
+                                    "y1": 50,
+                                    "x2": 80,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_Y",
-        "name": "Y",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "Y",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 150,
-                "y2": 175
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 50,
-                "x2": 150,
-                "y2": 175
-              },
-              {
-                "type": "line",
-                "x1": 150,
-                "y1": 175,
-                "x2": 150,
-                "y2": 300
-              }
+            "id": "letter_Y",
+            "name": "Y",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "左斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 80,
+                                    "y1": 50,
+                                    "x2": 150,
+                                    "y2": 175
+                              }
+                        ]
+                  },
+                  {
+                        "label": "右斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 220,
+                                    "y1": 50,
+                                    "x2": 150,
+                                    "y2": 175
+                              }
+                        ]
+                  },
+                  {
+                        "label": "竖",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 150,
+                                    "y1": 175,
+                                    "x2": 150,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       },
       {
-        "id": "letter_Z",
-        "name": "Z",
-        "emoji": "🔤",
-        "steps": [
-          {
-            "label": "Z",
-            "paths": [
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 50,
-                "x2": 210,
-                "y2": 50
-              },
-              {
-                "type": "line",
-                "x1": 210,
-                "y1": 50,
-                "x2": 90,
-                "y2": 300
-              },
-              {
-                "type": "line",
-                "x1": 90,
-                "y1": 300,
-                "x2": 210,
-                "y2": 300
-              }
+            "id": "letter_Z",
+            "name": "Z",
+            "emoji": "🔤",
+            "steps": [
+                  {
+                        "label": "上横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 80,
+                                    "y1": 50,
+                                    "x2": 220,
+                                    "y2": 50
+                              }
+                        ]
+                  },
+                  {
+                        "label": "斜",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 220,
+                                    "y1": 50,
+                                    "x2": 80,
+                                    "y2": 300
+                              }
+                        ]
+                  },
+                  {
+                        "label": "下横",
+                        "paths": [
+                              {
+                                    "type": "line",
+                                    "x1": 80,
+                                    "y1": 300,
+                                    "x2": 220,
+                                    "y2": 300
+                              }
+                        ]
+                  }
             ]
-          }
-        ]
       }
-    ]
+]
   },
   {
     "id": "digits",
