@@ -103,6 +103,11 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: #FFF8E7; f
   margin-top: 16px; padding: 12px 30px; border-radius: 20px;
   border: none; background: #4CAF50; color: #fff; font-size: 18px; cursor: pointer;
 }
+
+.category-tabs { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-bottom:10px; }
+.cat-tab { padding:8px 16px; border-radius:20px; border:2px solid #ddd; background:#fff; font-size:16px; cursor:pointer; font-weight:bold; }
+.cat-tab.active { border-color:#FF6B6B; background:#FFE0E0; }
+.cat-tab:active { transform:scale(0.95); }
 </style>
 </head>
 <body>
@@ -110,6 +115,7 @@ html, body { width: 100%; height: 100%; overflow: hidden; background: #FFF8E7; f
 <!-- HOME PAGE -->
 <div id="home" class="page active">
   <h1>选一个画吧！</h1>
+  <div class="category-tabs" id="category-tabs"></div>
   <div class="drawing-grid" id="drawing-grid"></div>
 </div>
 
@@ -176,10 +182,21 @@ function showPage(id) {
 }
 
 // --- Home Page ---
+let currentCategory = 0;
 function buildHome() {
+  const tabs = document.getElementById('category-tabs');
+  tabs.innerHTML = '';
+  CATEGORIES.forEach((cat, i) => {
+    const tab = document.createElement('div');
+    tab.className = 'cat-tab' + (i === currentCategory ? ' active' : '');
+    tab.textContent = cat.emoji + ' ' + cat.name;
+    tab.onclick = () => { currentCategory = i; buildHome(); };
+    tabs.appendChild(tab);
+  });
   const grid = document.getElementById('drawing-grid');
   grid.innerHTML = '';
-  for (const d of DRAWINGS) {
+  const drawings = CATEGORIES[currentCategory].drawings;
+  for (const d of drawings) {
     const card = document.createElement('div');
     card.className = 'drawing-card';
     const cvs = document.createElement('canvas');
