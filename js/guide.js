@@ -92,6 +92,19 @@ function drawThumbnail(ctx, drawing, size) {
   ctx.save();
   ctx.scale(scale, scale);
 
+  // For pinyin/letters/digits: render text directly (more readable at small sizes)
+  if (drawing.id && (drawing.id.startsWith('pinyin_') || drawing.id.startsWith('letter_') || drawing.id.startsWith('digit_'))) {
+    ctx.fillStyle = '#555';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const txt = drawing.name || drawing.emoji;
+    const fontSize = txt.length <= 2 ? 160 : txt.length === 3 ? 120 : 90;
+    ctx.font = 'bold ' + fontSize + 'px sans-serif';
+    ctx.fillText(txt, 150, 190);
+    ctx.restore();
+    return;
+  }
+
   if (drawing.steps[0] && drawing.steps[0].svg) {
     // For SVG-based drawings, draw all step images stacked
     for (const step of drawing.steps) {
