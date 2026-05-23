@@ -105,7 +105,7 @@ function drawThumbnail(ctx, drawing, size) {
     }
   } else {
     ctx.strokeStyle = '#555';
-    ctx.lineWidth = 2.5;
+    ctx.lineWidth = 4;
     ctx.setLineDash([]);
     for (const step of drawing.steps) {
       drawStepPaths(ctx, step);
