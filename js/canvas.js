@@ -12,7 +12,7 @@ function getDrawTransform(canvas) {
   const dpr = window.devicePixelRatio || 1;
   const w = canvas.width / dpr;
   const h = canvas.height / dpr;
-  const scale = Math.min(w, h) / 350;
+  const scale = Math.min(w / 300, h / 350) * 0.9;
   const offsetX = (w - 300 * scale) / 2;
   const offsetY = (h - 350 * scale) / 2;
   return { scale, offsetX, offsetY, dpr };
