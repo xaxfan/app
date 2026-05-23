@@ -1,0 +1,1 @@
+cd Q:/repos/xaxfan-app && python generate_pinyin.py
