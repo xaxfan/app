@@ -294,7 +294,9 @@ function showDone() {
   showPage('done-page');
   // Voice congratulation
   if ('speechSynthesis' in window) {
-    const u = new SpeechSynthesisUtterance('宸宸你真棒');
+    const phrases = ['宸宸你真棒','宸宸你太厉害了吧','宸宸你真是妈妈的乖宝宝','宸宸你又厉害了'];
+    const text = phrases[Math.floor(Math.random() * phrases.length)];
+    const u = new SpeechSynthesisUtterance(text);
     u.lang = 'zh-CN';
     u.rate = 0.9;
     u.pitch = 1.3;
