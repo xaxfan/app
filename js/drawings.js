@@ -2078,12 +2078,8 @@ const CATEGORIES = [
         "emoji": "0",
         "steps": [
           {
-            "label": "左弧",
-            "svg": "svg/digit_0/step1_左弧.svg"
-          },
-          {
-            "label": "右弧",
-            "svg": "svg/digit_0/step2_右弧.svg"
+            "label": "0",
+            "svg": "svg/digit_0/complete.svg"
           }
         ]
       },
@@ -2093,12 +2089,8 @@ const CATEGORIES = [
         "emoji": "1",
         "steps": [
           {
-            "label": "斜头",
-            "svg": "svg/digit_1/step1_斜头.svg"
-          },
-          {
-            "label": "竖",
-            "svg": "svg/digit_1/step2_竖.svg"
+            "label": "1",
+            "svg": "svg/digit_1/complete.svg"
           }
         ]
       },
@@ -2108,12 +2100,8 @@ const CATEGORIES = [
         "emoji": "2",
         "steps": [
           {
-            "label": "上弧",
-            "svg": "svg/digit_2/step1_上弧.svg"
-          },
-          {
-            "label": "底横",
-            "svg": "svg/digit_2/step2_底横.svg"
+            "label": "2",
+            "svg": "svg/digit_2/complete.svg"
           }
         ]
       },
@@ -2123,12 +2111,8 @@ const CATEGORIES = [
         "emoji": "3",
         "steps": [
           {
-            "label": "上弧",
-            "svg": "svg/digit_3/step1_上弧.svg"
-          },
-          {
-            "label": "下弧",
-            "svg": "svg/digit_3/step2_下弧.svg"
+            "label": "3",
+            "svg": "svg/digit_3/complete.svg"
           }
         ]
       },
@@ -2138,16 +2122,8 @@ const CATEGORIES = [
         "emoji": "4",
         "steps": [
           {
-            "label": "斜",
-            "svg": "svg/digit_4/step1_斜.svg"
-          },
-          {
-            "label": "横",
-            "svg": "svg/digit_4/step2_横.svg"
-          },
-          {
-            "label": "竖",
-            "svg": "svg/digit_4/step3_竖.svg"
+            "label": "4",
+            "svg": "svg/digit_4/complete.svg"
           }
         ]
       },
@@ -2157,16 +2133,8 @@ const CATEGORIES = [
         "emoji": "5",
         "steps": [
           {
-            "label": "顶横",
-            "svg": "svg/digit_5/step1_顶横.svg"
-          },
-          {
-            "label": "竖",
-            "svg": "svg/digit_5/step2_竖.svg"
-          },
-          {
-            "label": "下弧",
-            "svg": "svg/digit_5/step3_下弧.svg"
+            "label": "5",
+            "svg": "svg/digit_5/complete.svg"
           }
         ]
       },
@@ -2176,12 +2144,8 @@ const CATEGORIES = [
         "emoji": "6",
         "steps": [
           {
-            "label": "大弧",
-            "svg": "svg/digit_6/step1_大弧.svg"
-          },
-          {
-            "label": "圈",
-            "svg": "svg/digit_6/step2_圈.svg"
+            "label": "6",
+            "svg": "svg/digit_6/complete.svg"
           }
         ]
       },
@@ -2191,12 +2155,8 @@ const CATEGORIES = [
         "emoji": "7",
         "steps": [
           {
-            "label": "横",
-            "svg": "svg/digit_7/step1_横.svg"
-          },
-          {
-            "label": "斜",
-            "svg": "svg/digit_7/step2_斜.svg"
+            "label": "7",
+            "svg": "svg/digit_7/complete.svg"
           }
         ]
       },
@@ -2206,12 +2166,8 @@ const CATEGORIES = [
         "emoji": "8",
         "steps": [
           {
-            "label": "上圈",
-            "svg": "svg/digit_8/step1_上圈.svg"
-          },
-          {
-            "label": "下圈",
-            "svg": "svg/digit_8/step2_下圈.svg"
+            "label": "8",
+            "svg": "svg/digit_8/complete.svg"
           }
         ]
       },
@@ -2221,12 +2177,8 @@ const CATEGORIES = [
         "emoji": "9",
         "steps": [
           {
-            "label": "圈",
-            "svg": "svg/digit_9/step1_圈.svg"
-          },
-          {
-            "label": "竖弯",
-            "svg": "svg/digit_9/step2_竖弯.svg"
+            "label": "9",
+            "svg": "svg/digit_9/complete.svg"
           }
         ]
       }
